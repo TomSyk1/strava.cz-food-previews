@@ -5,7 +5,7 @@ A browser extension for Chromium-based browsers and Mozilla Firefox that fetches
 
 ---
 
-## Directory Structure
+## Firefox & chromium browser support.
 
 ```text
 strava-food-previews/
