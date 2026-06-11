@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Strava.cz Dynamic Food Previewer",
+  "version": "1.1",
+  "description": "Scrapes food text from Strava.cz and dynamically grabs the top web image search result.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://duckduckgo.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://app.strava.cz/*", "https://*.strava.cz/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "strava-food-previewer@local",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}
